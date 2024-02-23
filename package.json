@@ -7,6 +7,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
+    "caniuse-lite": "^1.0.30001589",
     "firebase": "^10.8.0",
     "framer-motion": "^8.5.5",
     "nodemon": "^3.0.3",
@@ -27,8 +28,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
-  "start:nodemon": "nodemon"
-    ,
+    "start:nodemon": "nodemon",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"

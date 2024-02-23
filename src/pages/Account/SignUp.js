@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 // import ArrowRightIcon from "@mui/icons-material/ArrowRight";
 // import  logowhite  from "../assests/logowhite.png";
 import { getAuth, createUserWithEmailAndPassword , updateProfile} from "firebase/auth";
-// import { motion } from "framer-motion";
+ import { motion } from "framer-motion";
  import {MutatingDots} from "react-loader-spinner"
  import shopmatelogo8 from '../../assets/images/shopmatelogo8.png'
 
