@@ -4,6 +4,7 @@ import { toast } from 'react-toastify';
 const initialState = {
   userInfo: [],
   products: [],
+  orders:[],
 };
 
 export const shopSlice = createSlice({
@@ -41,6 +42,15 @@ export const shopSlice = createSlice({
         item.quantity--;
       }
     },
+  
+    addToOrder: (state, action) => {
+     
+        state.orders.push(action.payload);
+      
+    
+      toast("'check your Item in order  !'")
+    },
+   
     setUserInfo:(state,action) =>{
       state.userInfo = action.payload
       }  ,
@@ -68,6 +78,7 @@ export const {
   deleteItem,
   resetCart,
   setUserInfo,
-  userSignOut
+  userSignOut,
+  addToOrder
 } = shopSlice.actions;
 export default shopSlice.reducer;

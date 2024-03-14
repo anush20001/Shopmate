@@ -101,7 +101,11 @@ const HeaderBottom = () => {
               </motion.ul>
             )}
           </div>
-          <div className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl">
+          <div 
+          className="relative w-full lg:w-[600px] h-[50px] text-base text-primeColor bg-white flex items-center gap-2 justify-between px-6 rounded-xl" 
+          
+          >
+          
             <input
               className="flex-1 h-full outline-none placeholder:text-[#C4C4C4] placeholder:text-[14px]"
               type="text"
@@ -113,7 +117,8 @@ const HeaderBottom = () => {
             {searchQuery && (
               <div
                 className={`w-full mx-auto h-96 bg-white top-16 absolute left-0 z-50 overflow-y-scroll shadow-2xl scrollbar-hide cursor-pointer`}
-              >
+             
+             >
                 {searchQuery &&
                   filteredProducts.map((item) => (
                     <div
@@ -127,9 +132,10 @@ const HeaderBottom = () => {
                             state: {
                               item: item,
                             },
-                          }
-                        ) &
-                        setShowSearchBar(true) &
+                          }// it redirect the product we click and go to that product detail page
+                        )
+                         &
+                         setShowSearchBar(true) &
                         setSearchQuery("")
                       }
                       key={item._id}

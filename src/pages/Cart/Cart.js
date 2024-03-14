@@ -9,7 +9,8 @@ import ItemCard from "./ItemCard";
 import { toast } from 'react-toastify';
 import {MutatingDots} from "react-loader-spinner"
 
-const Cart = () => {
+
+const Cart = (props) => {
   const dispatch = useDispatch();
   const products = useSelector((state) => state.shopReducer.products);
   const [totalAmt, setTotalAmt] = useState("");
@@ -111,8 +112,11 @@ const Cart = () => {
               </div>
               <div className="flex justify-end">
                 <div >
-                  <button onClick={() => orderConfirmed()} className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300">
-                    {/* Proceed to Checkout */}
+                  {/* order */}
+                  <button onClick={() => orderConfirmed()} className="w-52 h-10 bg-primeColor text-white hover:bg-black duration-300"
+                   
+                  >
+                    
                     Order
                  
                     </button>
